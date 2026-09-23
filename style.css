@@ -939,52 +939,45 @@ section {
     flex: 1;
 }
 
-.sleek-form {
+.direct-contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.direct-icon {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.direct-contact-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.direct-contact-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.direct-actions {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.form-row {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.sleek-form input, .sleek-form textarea {
+.direct-btn {
     width: 100%;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border-color);
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    color: #fff;
-    font-family: var(--font-main);
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.sleek-form input:focus, .sleek-form textarea:focus {
-    border-color: #666;
-}
-
-.submit-btn {
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 1.2rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background: #ccc;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 /* Footer */
@@ -1045,11 +1038,66 @@ section {
         align-items: center;
     }
     .nav-links {
-        display: none;
+        gap: 15px;
     }
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 13px; /* Scales down all rem-based typography and spacing */
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+    .theme-toggle {
+        position: absolute;
+        right: 5%;
+        top: 1rem;
+    }
+    
+    .home-content h1 {
+        font-size: 3.5rem; /* Stop hero text from overflowing */
+    }
+    .home-content h1 span[style*="white-space: nowrap;"] {
+        white-space: normal !important; /* Allow name to wrap if needed */
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .project-card {
+        min-width: 280px; /* Prevent carousel overflow on 320px screens */
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+
+    /* Timeline Mobile Overrides */
     .alt-timeline-container::before {
         left: 20px;
     }

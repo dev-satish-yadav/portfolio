@@ -38,9 +38,6 @@
     <!-- Home Section -->
     <section id="home" class="home">
         <div class="home-content">
-            <div class="status-pill">
-                <span class="dot"></span> SENIOR BACKEND ENGINEER &bull; AVAILABLE FOR HIRE
-            </div>
             <h1><span style="white-space: nowrap;">Hi, I'm <span class="accent-color">Satish Yadav</span></span><br>
                 <span class="accent-color typewriter"><span id="typewriter-text"></span><span class="cursor">|</span></span>
             </h1>
@@ -55,10 +52,9 @@
             <div class="social-section">
                 <p>Find me on</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/dev-satish-yadav" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/satish-yadav-608521201/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:sy96552@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -120,6 +116,7 @@
             <span class="skill-tag"><i class="devicon-nestjs-plain colored"></i> NestJS</span>
             <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> Javascript</span>
             <span class="skill-tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
             <span class="skill-tag"><i class="devicon-express-original colored" style="filter: invert(1);"></i> Express.js</span>
             <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
             <span class="skill-tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
@@ -314,15 +311,22 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form class="sleek-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="First Name" required>
-                        <input type="text" placeholder="Last Name" required>
+                <div class="direct-contact-card">
+                    <div class="direct-icon">
+                        <i class="fas fa-envelope-open-text"></i>
                     </div>
-                    <input type="email" placeholder="Email Address" required>
-                    <textarea placeholder="Type your message here..." rows="5" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
+                    <h3>Start a Conversation</h3>
+                    <p>I'm currently open for new opportunities. Whether you have a project in mind, need a backend expert, or just want to connect, my inbox is always open.</p>
+                    
+                    <div class="direct-actions">
+                        <a href="mailto:sy96552@gmail.com" class="btn-action solid direct-btn">
+                            <i class="fas fa-paper-plane"></i> Send Direct Email
+                        </a>
+                        <button class="btn-action outline direct-btn" onclick="navigator.clipboard.writeText('sy96552@gmail.com'); this.innerHTML='<i class=\'fas fa-check\'></i> Copied to Clipboard!'; setTimeout(() => this.innerHTML='<i class=\'far fa-copy\'></i> Copy Email Address', 3000);">
+                            <i class="far fa-copy"></i> Copy Email Address
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -332,8 +336,8 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Satish Yadav. Built with passion.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/satish-yadav-608521201/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/dev-satish-yadav" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:sy96552@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>

@@ -58,3 +58,42 @@ if (themeToggle) {
         }
     });
 }
+
+// Contact Form Submission
+const contactForm = document.querySelector('.sleek-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the page from refreshing
+        
+        // Grab form fields
+        const firstName = this.querySelector('input[name="First Name"]').value.trim();
+        const lastName = this.querySelector('input[name="Last Name"]').value.trim();
+        const userEmail = this.querySelector('input[name="Email"]').value.trim();
+        const message = this.querySelector('textarea[name="Message"]').value.trim();
+        
+        const fullName = firstName + ' ' + lastName;
+        
+        // Construct the mailto link
+        const targetEmail = "sy96552@gmail.com";
+        const subject = encodeURIComponent(`New Portfolio Message from ${fullName}`);
+        const body = encodeURIComponent(`You have received a new message from your portfolio website.\n\nName: ${fullName}\nEmail: ${userEmail}\n\nMessage:\n${message}`);
+        
+        // Open the user's default email client
+        window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+        
+        // Optional: show a quick success state on the button
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Opening Email Client... <i class="fas fa-external-link-alt"></i>';
+        btn.style.background = '#4ade80';
+        btn.style.color = '#111';
+        
+        // Reset form and button
+        setTimeout(() => {
+            this.reset();
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.style.color = '';
+        }, 3000);
+    });
+}
